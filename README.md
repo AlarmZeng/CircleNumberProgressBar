@@ -115,4 +115,4 @@
 
 ### 详细文章
 
-对**CiecleNumberProgressBar**的详细介绍可以查看文章[CircleNumberProgressBar]()
+对**CiecleNumberProgressBar**的详细介绍可以查看文章[CircleNumberProgressBar](http://www.jianshu.com/p/1fa2e32ab6c3)
