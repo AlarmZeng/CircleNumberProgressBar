@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.zht.circlenumberprogressbar.activity.MainActivity">
 
     <com.zht.circlenumberprogressbar.widget.CircleNumberProgressBar
-        android:id="@+id/cnpb_progress"
+        android:id="@+id/cnpb_progress_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         app:cnpb_circle_radius="50dp" />
 
-</RelativeLayout>
+    <com.zht.circlenumberprogressbar.widget.CircleNumberProgressBar
+        android:id="@+id/cnpb_progress_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cnpb_circle_radius="80dp"
+        app:cnpb_reach_color="@color/colorAccent"
+        app:cnpb_text_color="@color/colorAccent"
+        app:cnpb_text_size="20sp" />
+
+</LinearLayout>

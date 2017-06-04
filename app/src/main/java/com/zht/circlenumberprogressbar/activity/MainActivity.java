@@ -10,7 +10,9 @@ import com.zht.circlenumberprogressbar.widget.CircleNumberProgressBar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CircleNumberProgressBar progressBar;
+    private CircleNumberProgressBar progressBarFirst;
+
+    private CircleNumberProgressBar progressBarSecond;
 
     private static final int PROGRESS_UPDATE = 1;
 
@@ -19,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
 
-            int progress = progressBar.getProgress();
+            int progress = progressBarFirst.getProgress();
             progress += 1;
 
             if (progress >= 100) {
                 handler.removeMessages(PROGRESS_UPDATE);
             }
 
-            progressBar.setProgress(progress);
+            progressBarFirst.setProgress(progress);
             handler.sendEmptyMessageDelayed(PROGRESS_UPDATE, 500);
         }
     };
@@ -35,8 +37,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        progressBar = (CircleNumberProgressBar) findViewById(R.id.cnpb_progress);
+        progressBarFirst = (CircleNumberProgressBar) findViewById(R.id.cnpb_progress_first);
+        progressBarSecond = (CircleNumberProgressBar) findViewById(R.id.cnpb_progress_second);
+
         handler.sendEmptyMessage(PROGRESS_UPDATE);
-//        progressBar.setProgress(80);
+        progressBarSecond.setProgress(80);
+//        progressBarFirst.setProgress(80);
     }
 }
