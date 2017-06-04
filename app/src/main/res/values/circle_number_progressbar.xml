@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="styleCircleNumberProgressBar" format="reference" />
+    
+    <declare-styleable name="CircleNumberProgressBar">
+        
+        <!-- 圆的半径 -->
+        <attr name="cnpb_circle_radius" format="dimension"/>
+
+        <!-- 进度条的宽度 -->
+        <attr name="cnpb_bar_width" format="dimension" />
+        
+        <!-- 达到的进度颜色 -->
+        <attr name="cnpb_reach_color" format="color" />
+        
+        <!-- 未达到的进度颜色 -->
+        <attr name="cnpb_unreach_color" format="color" />
+        
+        <!-- 文字大小 -->
+        <attr name="cnpb_text_size" format="dimension" />
+
+        <!-- 文字颜色 -->
+        <attr name="cnpb_text_color" format="color" />
+
+        <!-- 文字是否显示 -->
+        <attr name="cnpb_text_visibility" format="enum">
+            <enum name="invisible" value="0"/>
+            <enum name="visible" value="1"/>
+        </attr>
+
+        <!-- 单位 -->
+        <attr name="cnpb_unit" format="string"/>
+
+        <!-- 单位是否显示 -->
+        <attr name="cnpb_unit_visibility" format="enum">
+            <enum name="invisible" value="0"/>
+            <enum name="visible" value="1"/>
+        </attr>
+
+    </declare-styleable>
+
+    <style name="CircleNumberProgressBar">
+
+    </style>
+
+    <style name="CircleNumberProgressBar.Style">
+        <item name="cnpb_circle_radius">50dp</item>
+        <item name="cnpb_bar_width">8dp</item>
+        <item name="cnpb_reach_color">#FF303F9F</item>
+        <item name="cnpb_unreach_color">#FFD3D6DA</item>
+        <item name="cnpb_text_size">16sp</item>
+        <item name="cnpb_text_color">#FF303F9F</item>
+        <item name="cnpb_text_visibility">visible</item>
+        <item name="cnpb_unit">%</item>
+        <item name="cnpb_unit_visibility">visible</item>
+    </style>
+
+</resources>
