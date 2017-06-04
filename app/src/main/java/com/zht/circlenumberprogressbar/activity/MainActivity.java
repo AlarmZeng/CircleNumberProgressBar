@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CircleNumberProgressBar progressBar;
 
-    private static final int PROGRESS = 1;
+    private static final int PROGRESS_UPDATE = 1;
 
     private Handler handler = new Handler() {
 
@@ -23,12 +23,11 @@ public class MainActivity extends AppCompatActivity {
             progress += 1;
 
             if (progress >= 100) {
-                handler.removeMessages(PROGRESS);
+                handler.removeMessages(PROGRESS_UPDATE);
             }
 
             progressBar.setProgress(progress);
-            handler.sendEmptyMessageDelayed(PROGRESS, 500);
-
+            handler.sendEmptyMessageDelayed(PROGRESS_UPDATE, 500);
         }
     };
 
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressBar = (CircleNumberProgressBar) findViewById(R.id.cnpb_progress);
-        progressBar.setProgress(80);
-//        handler.sendEmptyMessageDelayed(PROGRESS, 2000);
+        handler.sendEmptyMessage(PROGRESS_UPDATE);
+//        progressBar.setProgress(80);
     }
 }

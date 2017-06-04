@@ -140,8 +140,6 @@ public class CircleNumberProgressBar extends ProgressBar {
         super.onDraw(canvas);
 
         String text = mUnitVisibility == VISIBLE ? getProgress() + mUnit : getProgress() + "";
-        float textWidth = mPaint.measureText(text);  //返回text的宽度
-        float textHeight = (mPaint.descent() + mPaint.ascent()) / 2;
         float baseline = getMeasuredHeight() / 2 + mPaint.getTextSize() / 2 - mPaint.getFontMetrics().descent - getPaddingTop();
         canvas.save();
         canvas.translate(getPaddingLeft() + mBarWidth / 2, getPaddingTop() + mBarWidth / 2);
@@ -164,7 +162,6 @@ public class CircleNumberProgressBar extends ProgressBar {
             mPaint.setColor(mTextColor);
             mPaint.setTextSize(mTextSize);
             mPaint.getTextBounds(text, 0, text.length(), mBound);
-//            canvas.drawText(text, mRadius - textWidth / 2 - mBarWidth, mRadius - textHeight, mPaint);
             canvas.drawText(text, mRadius - mBound.width() / 2, baseline, mPaint);
         }
 
