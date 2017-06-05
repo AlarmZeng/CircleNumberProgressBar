@@ -8,6 +8,9 @@
         <!-- 圆的半径 -->
         <attr name="cnpb_circle_radius" format="dimension"/>
 
+        <!-- 开始角度，0 ~ 360 -->
+        <attr name="cnpb_start_angle" format="integer" />
+
         <!-- 进度条的宽度 -->
         <attr name="cnpb_bar_width" format="dimension" />
         
@@ -46,6 +49,7 @@
 
     <style name="CircleNumberProgressBar.Style">
         <item name="cnpb_circle_radius">50dp</item>
+        <item name="cnpb_start_angle">0</item>
         <item name="cnpb_bar_width">8dp</item>
         <item name="cnpb_reach_color">#FF303F9F</item>
         <item name="cnpb_unreach_color">#FFD3D6DA</item>

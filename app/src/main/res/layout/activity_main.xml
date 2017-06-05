@@ -20,6 +20,7 @@
         android:id="@+id/cnpb_progress_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cnpb_start_angle="270"
         app:cnpb_circle_radius="80dp"
         app:cnpb_reach_color="@color/colorAccent"
         app:cnpb_text_color="@color/colorAccent"

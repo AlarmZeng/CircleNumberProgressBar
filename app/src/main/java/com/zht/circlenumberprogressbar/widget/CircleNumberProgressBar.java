@@ -24,6 +24,8 @@ public class CircleNumberProgressBar extends ProgressBar {
 
     private int mRadius;
 
+    private int mStartAngle;
+
     private int mBarWidth;
 
     private int mReachColor;
@@ -63,6 +65,8 @@ public class CircleNumberProgressBar extends ProgressBar {
 
         mRadius = typedArray.getDimensionPixelSize(R.styleable.CircleNumberProgressBar_cnpb_circle_radius, dp2px(30));
 
+        mStartAngle = typedArray.getInteger(R.styleable.CircleNumberProgressBar_cnpb_start_angle, 0);
+
         mBarWidth = typedArray.getDimensionPixelSize(R.styleable.CircleNumberProgressBar_cnpb_bar_width, dp2px(8));
 
         mReachColor = typedArray.getColor(R.styleable.CircleNumberProgressBar_cnpb_reach_color, 0xFF303F9F);
@@ -81,7 +85,6 @@ public class CircleNumberProgressBar extends ProgressBar {
 
         typedArray.recycle();
 
-        mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -154,7 +157,7 @@ public class CircleNumberProgressBar extends ProgressBar {
         mPaint.setColor(mReachColor);
         mPaint.setStrokeWidth(mBarWidth);
         float angle = getProgress() * 1.0f / getMax() * 360;
-        canvas.drawArc(rectF, 0, angle, false, mPaint);
+        canvas.drawArc(rectF, mStartAngle, angle, false, mPaint);
 
         //绘制文字
         if (mTextVisibility == VISIBLE) {
