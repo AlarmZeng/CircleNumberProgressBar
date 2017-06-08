@@ -89,9 +89,9 @@ public class CircleNumberProgressBar extends ProgressBar {
         mPaint.setDither(true);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
 
-        rectF = new RectF(0, 0, mRadius * 2, mRadius * 2);
+        rectF = new RectF(0, 0, mRadius * 2, mRadius * 2);  //绘制圆弧时用于规定圆弧边界
 
-        mBound = new Rect();
+        mBound = new Rect();  //用于获取字体边界
     }
 
     @Override
