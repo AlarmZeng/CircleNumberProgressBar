@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         handler.sendEmptyMessage(PROGRESS_UPDATE);
         progressBarSecond.setProgress(80);
+        progressBarSecond.setUnit("s");
 //        progressBarFirst.setProgress(80);
     }
 }
