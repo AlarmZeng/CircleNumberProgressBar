@@ -97,9 +97,6 @@ public class CircleNumberProgressBar extends ProgressBar {
     @Override
     protected synchronized void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
-        //可以使用API计算
-//        int wid = resolveSize(size, widthMeasureSpec);
-
         int widthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
         int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
