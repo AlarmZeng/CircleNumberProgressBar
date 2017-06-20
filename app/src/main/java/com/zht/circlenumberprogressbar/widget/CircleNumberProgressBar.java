@@ -246,6 +246,7 @@ public class CircleNumberProgressBar extends ProgressBar {
      * @return px值
      */
     protected int dp2px(float dp) {
+//        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
         return (int) (getResources().getDisplayMetrics().density * dp + 0.5f);
     }
 
